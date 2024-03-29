@@ -1,0 +1,255 @@
+@use "mixins";
+@use "animations";
+
+.l-nav a:hover {
+    background-color: #fff;
+    color: #222;
+}
+
+.nav__item .nav__link-icon:hover {
+    background-color: transparent;
+}
+
+.nav__icon:hover {
+    background-color: #87858599;
+}
+
+.collaboration__image:hover {
+    filter: brightness(130%) contrast(100%);
+    width: 27%;
+}
+
+.collaboration__image:nth-of-type(1):hover {
+    width: 33%;
+}
+
+.collaboration__image:nth-of-type(2):hover {
+    filter: brightness(190%) contrast(110%);
+}
+
+.components__name-sunshield:hover,
+.components__name-mirror:hover,
+.components__name-ISIM:hover,
+.components__name-sec_mirror:hover,
+.components__name-Antenna:hover {
+    background-color: transparent;
+
+    p {
+        position: relative;
+        font-size: 1.1rem;
+        font-weight: bolder;
+        margin: 0 -2rem;
+    }
+}
+
+.discoveries__image:hover,
+.infrared__image:hover,
+.size__image:hover {
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.form__legend:hover~.form__input,
+.form__legend:hover~.form__select,
+.form__legend:hover~.form__message {
+    border-color: #e1e133;
+}
+
+.main__scrollToTopBtn:hover {
+    background-color: #515050;
+}
+
+// States für Skript. Wegen Seperation of concerns
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.show__ham-nav {
+    display: flex;
+}
+
+.show-fade {
+    opacity: 1;
+    animation: fade 2s ease-in-out;
+}
+
+// Container Queries
+.discoveries,
+.components__container,
+.l-header,
+.l-nav,
+.l-main {
+    container-type: inline-size;
+}
+
+@container (max-width: 1630px) {
+
+    .header__title {
+        font-size: 4rem;
+        width: 90%;
+    }
+
+    .discoveries__images {
+        @include mixins.displayGrid(1fr, 1fr, 5rem);
+
+        .discoveries__image {
+            margin: auto;
+            height: auto;
+        }
+    }
+
+}
+
+@container (max-width: 1294px) {
+    .l-table {
+        width: 90%
+    }
+}
+
+@container (max-width: 1024px) {
+
+    .components__container {
+        width: 98%;
+    }
+
+    .components__name-mirror,
+    .components__name-sunshield,
+    .components__name-ISIM,
+    .components__name-sec_mirror,
+    .components__name-Antenna {
+        background-color: transparent;
+        margin: -1rem -1rem;
+        cursor: initial;
+
+        .components__name-text {
+            font-size: 0.7rem;
+        }
+    }
+
+    .components__name-mirror:hover,
+    .components__name-sunshield:hover,
+    .components__name-ISIM:hover,
+    .components__name-sec_mirror:hover,
+    .components__name-Antenna:hover {
+
+        .components__name-text {
+            position: relative;
+            font-size: 0.7rem;
+            font-weight: initial;
+            margin: auto;
+            cursor: auto;
+        }
+    }
+}
+
+@container (max-width: 984px) {
+
+    .nav__list {
+        flex-direction: column;
+        border: none;
+        align-items: center;
+        animation: move_nav-Elements 0.6s ease;
+        will-change: animation;
+    }
+
+    .nav__item {
+        padding: 1.2%;
+    }
+
+    .nav__item:nth-of-type(7) {
+        margin: auto;
+        min-width: 4rem;
+    }
+}
+
+// Media Queries
+@media screen and (max-width: 750px) {
+
+    .header__title {
+        font-size: 3.1rem;
+    }
+
+    p {
+        width: 100%;
+    }
+
+    .size__image {
+        height: 20rem;
+    }
+
+    .collaboration {
+        &__images {
+            flex-direction: column;
+        }
+
+        .collaboration__image {
+            width: 18rem;
+            margin: 3% 0;
+        }
+
+        .collaboration__image:nth-of-type(1) {
+            width: 23rem;
+        }
+
+        .collaboration__image:not(:nth-of-type(1)):hover {
+            width: 18rem;
+        }
+    }
+
+    .components__container .components__name-text {
+        font-size: 0.5rem;
+    }
+
+    .l-table {
+        width: 95%;
+        height: 36em;
+        font-size: 1rem;
+    }
+
+    .table__th:nth-of-type(4),
+    .table__td:nth-of-type(4) {
+        display: none;
+    }
+
+    .form__fieldset {
+        width: 95%;
+    }
+
+    .main__scrollToTopBtn {
+        background-color: #3c3b3b;
+    }
+}
+
+@media print {
+    .header__title {
+        position: relative;
+        animation: none;
+    }
+
+    .l-nav,
+    .header__image,
+    .launch__video,
+    .form,
+    .size__image:nth-of-type(2),
+    .discoveries__image:not(:nth-of-type(1)),
+    .collaboration__image {
+        display: none;
+    }
+
+    .size__image {
+        margin-bottom: 10rem;
+    }
+
+    .launch {
+        padding-top: 9rem;
+    }
+
+    .components {
+        padding-top: 23rem;
+        padding-bottom: 18rem;
+    }
+}

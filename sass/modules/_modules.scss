@@ -1,0 +1,268 @@
+@use "mixins";
+
+.nav__ham-icon,
+.nav__ham-icon-x {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+.nav__ham-icon-x {
+  display: none;
+  animation: move_nav-Elements 0.6s ease;
+  will-change: animation;
+}
+
+.nav__list {
+  @include mixins.displayFlex(row wrap, center, baseline);
+  list-style: none;
+  border: 1px solid;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  margin: auto 1rem;
+  margin-right: 0.7rem;
+}
+
+.nav__item:nth-of-type(7) {
+  width: 3rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.4s ease;
+}
+
+.header__image {
+  object-fit: cover;
+  height: 54.7rem;
+  width: 100%;
+}
+
+.header__title {
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 4.8rem;
+  font-weight: 700;
+  width: 20ch;
+  z-index: 1;
+  animation: font-colors 2s ease-in-out forwards;
+  will-change: animation;
+}
+
+// Einfacher mit Typ-Selekoren weil articles verschiedene Klassnenamen haben
+article h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+// Einfacher mit Typ-Selekoren weil articles verschiedene Klassnenamen haben
+article p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.size,
+.infrared,
+.collaboration {
+  text-align: center;
+}
+
+.size__images {
+  @include mixins.displayFlex(row wrap, center, baseline);
+}
+
+.size__image {
+  height: 36rem;
+  width: 46rem;
+  max-width: 100%;
+  margin: 1% 1%;
+}
+
+.infrared__image {
+  width: 64rem;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.collaboration__images {
+  @include mixins.displayFlex(row wrap, center, center);
+}
+
+.collaboration__image {
+  opacity: 0.3;
+  object-fit: contain;
+  width: 25%;
+  height: auto;
+  margin: 0 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.collaboration__image:nth-of-type(2) {
+  filter: brightness(150%) contrast(110%);
+}
+
+.collaboration__image:nth-of-type(3) {
+  filter: brightness(110%) contrast(110%);
+}
+
+.collaboration__image:nth-of-type(1) {
+  width: 30%;
+}
+
+.launch {
+  text-align: center;
+
+  &__video {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.discoveries {
+  text-align: center;
+
+  &__images {
+    @include mixins.displayGrid(1fr 1fr, repeat(auto-fit, minmax(40rem, 1fr)), 5rem);
+  }
+
+  &__image {
+    object-fit: fill;
+    height: 30rem;
+    width: 60rem;
+    max-width: 100%;
+    transition: all 0.1s ease-out;
+  }
+}
+
+.components {
+
+  &__image {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &__container {
+    width: 80%;
+    position: relative;
+    margin: auto;
+  }
+}
+
+.components__name-mirror,
+.components__name-sunshield,
+.components__name-ISIM,
+.components__name-sec_mirror,
+.components__name-Antenna {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #ffff;
+  z-index: 1;
+  cursor: pointer;
+
+  p {
+    font-size: 0;
+  }
+}
+
+.components__name-mirror {
+  position: absolute;
+  bottom: 63%;
+  left: 44%;
+}
+
+.components__name-sunshield {
+  position: absolute;
+  bottom: 40%;
+  left: 36%;
+}
+
+.components__name-ISIM {
+  position: absolute;
+  bottom: 53%;
+  left: 39.4%;
+}
+
+.components__name-sec_mirror {
+  position: absolute;
+  bottom: 54%;
+  left: 66%;
+}
+
+.components__name-Antenna {
+  position: absolute;
+  bottom: 20%;
+  left: 42%;
+}
+
+.table__legend {
+  text-align: center;
+}
+
+.table__thead {
+  height: 5.5rem;
+  font-weight: bolder;
+  font-size: large;
+}
+
+.table__tbody {
+  height: 22rem;
+}
+
+.form__legend {
+  padding-bottom: 0.7rem;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form__input,
+.form__select,
+.form__message {
+  transition: border-color 0.4s ease-in-out;
+}
+
+.form__message {
+  width: 100%;
+  height: 5rem;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.form__legend {
+  font-size: 1.6rem;
+  animation: jumps 1s ease infinite;
+  will-change: animation;
+}
+
+.main__scrollToTopBtn {
+  display: none;
+  position: sticky;
+  left: 100%;
+  bottom: 1.6rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+  transition: background-color 0.2s;
+}

@@ -1,0 +1,19 @@
+@mixin table($border-color: black, $collapse: collapse) {
+    border-color: $border-color;
+    border-collapse: $collapse;
+    margin: auto;
+}
+
+@mixin displayFlex($flex-flow: row nowrap, $justify-content: space-evenly, $align-items: center) {
+    display: flex;
+    flex-flow: $flex-flow;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin displayGrid($grid-template-rows: 1fr, $grid-template-columns: 1fr, $gap: 10rem) {
+    display: grid;
+    grid-template-rows: $grid-template-rows;
+    grid-template-columns: $grid-template-columns;
+    gap: $gap;
+}

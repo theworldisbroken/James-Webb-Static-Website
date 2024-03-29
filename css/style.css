@@ -1,0 +1,735 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+*::selection {
+  background-color: #736f6f;
+}
+
+:root {
+  font-family: "Lucida Sans", Verdana, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: #222;
+  color: #fff;
+}
+
+article {
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
+p {
+  font-family: "Lucida Sans", "Courier New", sans-serif;
+  width: 70%;
+  margin: 1% auto;
+  padding: 1%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000000;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+}
+
+th,
+td {
+  border: 1px solid #ffffff;
+}
+
+img {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+hr {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+form {
+  margin: 0 auto;
+  text-align: center;
+}
+
+fieldset {
+  display: inline-block;
+  border: 1px solid #ffffff;
+  width: 40rem;
+}
+
+input[type=text],
+input[type=number],
+input[type=submit],
+input[type=reset],
+input[type=file],
+textarea,
+select,
+button {
+  margin: 1% 0;
+  width: 10rem;
+  height: 2.5rem;
+}
+
+select,
+option {
+  width: 100%;
+  font-size: large;
+  border: 1px solid #ccc;
+  background-color: #444;
+  color: #fff;
+  font-size: large;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  height: 3rem;
+}
+
+input[type=text],
+input[type=number],
+input[type=email],
+textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background-color: #444;
+  color: #fff;
+  font-size: medium;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  height: 3rem;
+}
+
+input[type=submit],
+input[type=reset] {
+  width: 10rem;
+  background-color: #0351a9;
+  font-size: large;
+  color: #ffffff;
+  border: 1px solid #8097c8;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+input[type=submit]:hover,
+input[type=reset]:hover,
+input[type=file]:hover {
+  background-color: #0566d4;
+  color: #fff;
+  transform: translateY(3px);
+}
+
+.l-nav {
+  background-color: #444;
+  position: sticky;
+  top: 0;
+  z-index: 4;
+}
+
+.l-header {
+  position: relative;
+}
+
+.l-main {
+  padding: 20px;
+}
+
+#article {
+  margin-bottom: 40px;
+}
+
+.l-table {
+  width: 57%;
+  text-align: center;
+}
+
+.nav__ham-icon,
+.nav__ham-icon-x {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+
+.nav__ham-icon-x {
+  display: none;
+  animation: move_nav-Elements 0.6s ease;
+  will-change: animation;
+}
+
+.nav__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: baseline;
+  list-style: none;
+  border: 1px solid;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__item {
+  margin: auto 1rem;
+  margin-right: 0.7rem;
+}
+
+.nav__item:nth-of-type(7) {
+  width: 3rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.4s ease;
+}
+
+.header__image {
+  object-fit: cover;
+  height: 54.7rem;
+  width: 100%;
+}
+
+.header__title {
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 4.8rem;
+  font-weight: 700;
+  width: 20ch;
+  z-index: 1;
+  animation: font-colors 2s ease-in-out forwards;
+  will-change: animation;
+}
+
+article h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+article p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.size,
+.infrared,
+.collaboration {
+  text-align: center;
+}
+
+.size__images {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.size__image {
+  height: 36rem;
+  width: 46rem;
+  max-width: 100%;
+  margin: 1% 1%;
+}
+
+.infrared__image {
+  width: 64rem;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.collaboration__images {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.collaboration__image {
+  opacity: 0.3;
+  object-fit: contain;
+  width: 25%;
+  height: auto;
+  margin: 0 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.collaboration__image:nth-of-type(2) {
+  filter: brightness(150%) contrast(110%);
+}
+
+.collaboration__image:nth-of-type(3) {
+  filter: brightness(110%) contrast(110%);
+}
+
+.collaboration__image:nth-of-type(1) {
+  width: 30%;
+}
+
+.launch {
+  text-align: center;
+}
+.launch__video {
+  max-width: 100%;
+  height: auto;
+}
+
+.discoveries {
+  text-align: center;
+}
+.discoveries__images {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  gap: 5rem;
+}
+.discoveries__image {
+  object-fit: fill;
+  height: 30rem;
+  width: 60rem;
+  max-width: 100%;
+  transition: all 0.1s ease-out;
+}
+
+.components__image {
+  object-fit: cover;
+  width: 100%;
+}
+.components__container {
+  width: 80%;
+  position: relative;
+  margin: auto;
+}
+
+.components__name-mirror,
+.components__name-sunshield,
+.components__name-ISIM,
+.components__name-sec_mirror,
+.components__name-Antenna {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 1;
+  cursor: pointer;
+}
+.components__name-mirror p,
+.components__name-sunshield p,
+.components__name-ISIM p,
+.components__name-sec_mirror p,
+.components__name-Antenna p {
+  font-size: 0;
+}
+
+.components__name-mirror {
+  position: absolute;
+  bottom: 63%;
+  left: 44%;
+}
+
+.components__name-sunshield {
+  position: absolute;
+  bottom: 40%;
+  left: 36%;
+}
+
+.components__name-ISIM {
+  position: absolute;
+  bottom: 53%;
+  left: 39.4%;
+}
+
+.components__name-sec_mirror {
+  position: absolute;
+  bottom: 54%;
+  left: 66%;
+}
+
+.components__name-Antenna {
+  position: absolute;
+  bottom: 20%;
+  left: 42%;
+}
+
+.table__legend {
+  text-align: center;
+}
+
+.table__thead {
+  height: 5.5rem;
+  font-weight: bolder;
+  font-size: large;
+}
+
+.table__tbody {
+  height: 22rem;
+}
+
+.form__legend {
+  padding-bottom: 0.7rem;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form__input,
+.form__select,
+.form__message {
+  transition: border-color 0.4s ease-in-out;
+}
+
+.form__message {
+  width: 100%;
+  height: 5rem;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.form__legend {
+  font-size: 1.6rem;
+  animation: jumps 1s ease infinite;
+  will-change: animation;
+}
+
+.main__scrollToTopBtn {
+  display: none;
+  position: sticky;
+  left: 100%;
+  bottom: 1.6rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+  transition: background-color 0.2s;
+}
+
+@keyframes font-colors {
+  0% {
+    color: #ffffff;
+  }
+  30% {
+    color: #5d9eff;
+  }
+  60% {
+    color: #ff434c;
+  }
+  100% {
+    color: #ffff00;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes jumps {
+  0%, 20%, 30%, 40%, 60%, 80%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+@keyframes move_nav-Elements {
+  0% {
+    transform: translateX(8rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.l-nav a:hover {
+  background-color: #fff;
+  color: #222;
+}
+
+.nav__item .nav__link-icon:hover {
+  background-color: transparent;
+}
+
+.nav__icon:hover {
+  background-color: rgba(135, 133, 133, 0.6);
+}
+
+.collaboration__image:hover {
+  filter: brightness(130%) contrast(100%);
+  width: 27%;
+}
+
+.collaboration__image:nth-of-type(1):hover {
+  width: 33%;
+}
+
+.collaboration__image:nth-of-type(2):hover {
+  filter: brightness(190%) contrast(110%);
+}
+
+.components__name-sunshield:hover,
+.components__name-mirror:hover,
+.components__name-ISIM:hover,
+.components__name-sec_mirror:hover,
+.components__name-Antenna:hover {
+  background-color: transparent;
+}
+.components__name-sunshield:hover p,
+.components__name-mirror:hover p,
+.components__name-ISIM:hover p,
+.components__name-sec_mirror:hover p,
+.components__name-Antenna:hover p {
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  margin: 0 -2rem;
+}
+
+.discoveries__image:hover,
+.infrared__image:hover,
+.size__image:hover {
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.form__legend:hover ~ .form__input,
+.form__legend:hover ~ .form__select,
+.form__legend:hover ~ .form__message {
+  border-color: #e1e133;
+}
+
+.main__scrollToTopBtn:hover {
+  background-color: #515050;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.show__ham-nav {
+  display: flex;
+}
+
+.show-fade {
+  opacity: 1;
+  animation: fade 2s ease-in-out;
+}
+
+.discoveries,
+.components__container,
+.l-header,
+.l-nav,
+.l-main {
+  container-type: inline-size;
+}
+
+@container (max-width: 1630px) {
+  .header__title {
+    font-size: 4rem;
+    width: 90%;
+  }
+  .discoveries__images {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+  }
+  .discoveries__images .discoveries__image {
+    margin: auto;
+    height: auto;
+  }
+}
+@container (max-width: 1294px) {
+  .l-table {
+    width: 90%;
+  }
+}
+@container (max-width: 1024px) {
+  .components__container {
+    width: 98%;
+  }
+  .components__name-mirror,
+  .components__name-sunshield,
+  .components__name-ISIM,
+  .components__name-sec_mirror,
+  .components__name-Antenna {
+    background-color: transparent;
+    margin: -1rem -1rem;
+    cursor: initial;
+  }
+  .components__name-mirror .components__name-text,
+  .components__name-sunshield .components__name-text,
+  .components__name-ISIM .components__name-text,
+  .components__name-sec_mirror .components__name-text,
+  .components__name-Antenna .components__name-text {
+    font-size: 0.7rem;
+  }
+  .components__name-mirror:hover .components__name-text,
+  .components__name-sunshield:hover .components__name-text,
+  .components__name-ISIM:hover .components__name-text,
+  .components__name-sec_mirror:hover .components__name-text,
+  .components__name-Antenna:hover .components__name-text {
+    position: relative;
+    font-size: 0.7rem;
+    font-weight: initial;
+    margin: auto;
+    cursor: auto;
+  }
+}
+@container (max-width: 984px) {
+  .nav__list {
+    flex-direction: column;
+    border: none;
+    align-items: center;
+    animation: move_nav-Elements 0.6s ease;
+    will-change: animation;
+  }
+  .nav__item {
+    padding: 1.2%;
+  }
+  .nav__item:nth-of-type(7) {
+    margin: auto;
+    min-width: 4rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .header__title {
+    font-size: 3.1rem;
+  }
+  p {
+    width: 100%;
+  }
+  .size__image {
+    height: 20rem;
+  }
+  .collaboration__images {
+    flex-direction: column;
+  }
+  .collaboration .collaboration__image {
+    width: 18rem;
+    margin: 3% 0;
+  }
+  .collaboration .collaboration__image:nth-of-type(1) {
+    width: 23rem;
+  }
+  .collaboration .collaboration__image:not(:nth-of-type(1)):hover {
+    width: 18rem;
+  }
+  .components__container .components__name-text {
+    font-size: 0.5rem;
+  }
+  .l-table {
+    width: 95%;
+    height: 36em;
+    font-size: 1rem;
+  }
+  .table__th:nth-of-type(4),
+  .table__td:nth-of-type(4) {
+    display: none;
+  }
+  .form__fieldset {
+    width: 95%;
+  }
+  .main__scrollToTopBtn {
+    background-color: #3c3b3b;
+  }
+}
+@media print {
+  .header__title {
+    position: relative;
+    animation: none;
+  }
+  .l-nav,
+  .header__image,
+  .launch__video,
+  .form,
+  .size__image:nth-of-type(2),
+  .discoveries__image:not(:nth-of-type(1)),
+  .collaboration__image {
+    display: none;
+  }
+  .size__image {
+    margin-bottom: 10rem;
+  }
+  .launch {
+    padding-top: 9rem;
+  }
+  .components {
+    padding-top: 23rem;
+    padding-bottom: 18rem;
+  }
+}
+@media (prefers-color-scheme: light) {
+  body {
+    color: #000;
+    background: #fafafa;
+  }
+  select,
+  option,
+  input[type=text],
+  input[type=number],
+  input[type=email],
+  textarea {
+    border-color: #000000;
+    background-color: #d9d7d7;
+    color: #000;
+  }
+  .form__fieldset {
+    border: 2px solid #000;
+  }
+  .discoveries__image:hover,
+  .infrared__image:hover,
+  .size__image:hover {
+    outline: 3px solid #000000;
+    border-color: #fff;
+  }
+  .main__scrollToTopBtn {
+    background-color: #363333;
+  }
+  .table__th,
+  .table__td {
+    border-color: #000;
+  }
+  .components_name-mirror p,
+  .components_name-sunshield p,
+  .components_name-ISIM p,
+  .components_name-sec_mirror p,
+  .components_name-Antenna p {
+    color: #fff;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

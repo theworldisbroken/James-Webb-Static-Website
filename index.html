@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>James Webb Telescope</title>
+    <meta name="author" content="Mohammad Abu Mady">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <nav class="l-nav">
+        <!-- https://icons8.com/icons/set/hamburger -->
+        <!-- https://icons8.com/icons/set/hamburger-x -->
+        <div class="nav__hamnav-container">
+            <img class="nav__ham-icon" src="./Images/icons8-hamburger-50-white.png" alt="icon" />
+            <!-- Black ham icon for light mode -->
+            <img class="nav__ham-icon" src="./Images/icons8-hamburger-50-black.png" alt="icon" />
+            <img class="nav__ham-icon-x" src="./Images/icons8-x-50.png" alt="icon" />
+        </div>
+        <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link">Size</a></li>
+            <li class="nav__item"><a class="nav__link">infrared</a></li>
+            <li class="nav__item"><a class="nav__link">Collaborations</a></li>
+            <li class="nav__item"><a class="nav__link">Launch</a></li>
+            <li class="nav__item"><a class="nav__link">Scientific discoveries</a></li>
+            <li class="nav__item"><a class="nav__link">Components</a></li>
+            <!-- https://icons8.com/icons/set/contact-us -->
+            <li class="nav__item"><a class="nav__link-icon"><img class="nav__icon" src="./Images/icons8-letter-50.png"
+                        alt="icon" /></a></li>
+        </ul>
+    </nav>
+    <header class="l-header">
+        <h1 class="header__title">James Webb Space Telescope</h1>
+        <!-- src wird im script vergeben -->
+        <img src="" class="header__image" id="header__image" alt="Slider Images">
+    </header>
+    <main class="l-main">
+        <article id="article" class="size">
+            <h2 class="size__title"> Size and Capabilities:</h2>
+            <p class="size__text">The James Webb Space Telescope is the largest and most powerful space telescope ever
+                built, with a
+                primary mirror that is 6.5 meters in diameter.
+                Its advanced technologies enable it to observe the universe in the infrared spectrum and peer back
+                in time to the early universe.
+            </p>
+            <div class="size__images">
+                <img id="size_image_1" class="size__image"
+                    src="https://cdn.vox-cdn.com/thumbor/TZYlg94QiDlBujdBZgshQYKCEhQ=/1400x1050/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/22863764/33433274343_277deba9eb_o.jpg"
+                    alt="Building of james Webb">
+                <img id="size_image_2" class="size__image"
+                    src="https://www.nasa.gov/wp-content/uploads/2019/08/right.jpeg"
+                    alt="Building of james Webb">
+            </div>
+        </article>
+        <hr>
+        <article id="article" class="infrared">
+            <h2 class="infrared__title">Infrared technology:</h2>
+            <p class="infrared__text">The James Webb Space Telescope utilizes infrared technology to observe and study
+                some of the earliest and
+                most distant objects in the universe. The James Webb Space Telescope detects near-infrared and
+                mid-infrared wavelengths, the light beyond the red end of the visible spectrum. This provides
+                unprecedented insights into the formation of
+                galaxies, stars, and planetary systems, as well as the evolution of the universe itself.
+            </p>
+            <div class="infrared__images">
+                <img class="infrared__image" id="infrared_image"
+                    src="https://webbtelescope.org/files/live/sites/webb/files/home/webb-science/the-webb-mission/infrared-astronomy/_images/STScI-J-EMS-hst-jwst-sst-z2500x1004.jpg?t=tn2400"
+                    alt="Infrared-Technology">
+            </div>
+        </article>
+        <hr>
+        <article id="article" class="collaboration">
+            <h2 class="collaboration__title">International Collaboration:</h2>
+            <p class="collaboration__text"> The James Webb Space Telescope is a joint project between NASA, the European
+                Space Agency, and the
+                Canadian Space Agency. The telescope was built by a team of scientists and engineers from these agencies
+                and numerous other partner organizations.
+            </p>
+            <div class="collaboration__images">
+                <img class="collaboration__image" id="nasa-logo"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/2449px-NASA_logo.svg.png"
+                    alt="Nasa">
+                <!-- https://en.wikipedia.org/wiki/File:ESA_logo_simple.svg -->
+                <img class="collaboration__image" id="esa-logo" src="Images/esa-logo.png" alt="Esa">
+                <img class="collaboration__image" id="asc-logo"
+                    src="https://upload.wikimedia.org/wikipedia/de/thumb/4/43/Logo_Canadian_Space_Agency.svg/2048px-Logo_Canadian_Space_Agency.svg.png"
+                    alt="Csa">
+            </div>
+        </article>
+        <hr>
+        <article id="article" class="launch">
+            <h2 class="launch__title">Launch:</h2>
+            <p class="launch__text"> The James Webb Space Telescope was launched on 25 December 2021 on an Ariane 5
+                rocket from Kourou,
+                French Guiana, and arrived at the Sun–Earth L2 Lagrange point in January 2022
+            </p>
+            <video class="launch__video"
+                poster="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2021/12/webb_liftoff_on_ariane_5/23876634-1-eng-GB/Webb_liftoff_on_Ariane_5_pillars.jpg"
+                width="900" height="550"
+                src="https://dlmultimedia.esa.int/download/public/videos/2022/01/005/2201_005_AR_EN.mp4" controls>
+            </video>
+        </article>
+        <hr>
+        <article id="article" class="discoveries">
+            <h2 class="discoveries__title">Scientific discoveries:</h2>
+            <p class="discoveries__text">Astronomers using NASA’s James Webb Space Telescope have discovered a
+                thread-like arrangement of 10 galaxies that existed just 830 million years after the big bang. The 3
+                million light-year-long structure is anchored by a luminous quasar – a galaxy with an active,
+                supermassive black hole at its core.</p>
+            <div class="discoveries__images">
+                <!-- https://esawebb.org/images/weic2205a/ -->
+                <img id="discoveries_image_1" class="discoveries__image"
+                    src="https://cdn.esawebb.org/archives/images/screen/weic2205a.jpg" alt="Cosmic Cliffs">
+                <!-- https://esawebb.org/images/EIGER1/ -->
+                <img id="discoveries_image_2" class="discoveries__image"
+                    src="https://cdn.esawebb.org/archives/images/screen/EIGER1.jpg" alt="Quasar J0100+2802">
+                <!-- https://esawebb.org/images/potm2305a/ -->
+                <img id="discoveries_image_3" class="discoveries__image"
+                    src="https://cdn.esawebb.org/archives/images/screen/potm2305a.jpg" alt="barred spiral galaxy">
+                <!-- https://esawebb.org/images/weic2212a/ -->
+                <img id="discoveries_image_4" class="discoveries__image"
+                    src="https://cdn.esawebb.org/archives/images/screen/weic2212a.jpg" alt="Tarantula Nebula">
+            </div>
+        </article>
+        <hr>
+        <article id="article" class="components">
+            <h2 class="components__title">Components:</h2>
+            <div class="components__container">
+                <img class="components__image" src="https://cdn.esawebb.org/archives/images/screen/weic2204a.jpg"
+                    alt="Webb components">
+                <div class="components__name-mirror">
+                    <p class="components__name-text">Mirror</p>
+                </div>
+                <div class="components__name-sunshield">
+                    <p class="components__name-text">Sunshield</p>
+                </div>
+                <div class="components__name-ISIM">
+                    <p class="components__name-text">ISIM</p>
+                </div>
+                <div class="components__name-sec_mirror">
+                    <p class="components__name-text"> Secondary Mirror</p>
+                </div>
+                <div class="components__name-Antenna">
+                    <p class="components__name-text">Antenna</p>
+                </div>
+            </div>
+        </article>
+        <hr>
+        <!-- https://webb.nasa.gov/content/webbLaunch/assets/documents/Telescope%20Comparison%20Infographic_TAGGED.pdf -->
+        <h2 class="table__legend">Telescope Comparison</h2>
+        <table class="l-table">
+            <thead class="table__thead">
+                <tr>
+                    <th class="table__th">Telescope</th>
+                    <th class="table__th">Hubble</th>
+                    <th class="table__th">Webb</th>
+                    <th class="table__th">Roman(2027)</th>
+                </tr>
+            </thead>
+            <tbody class="table__tbody">
+                <tr>
+                    <td class="table__td">Primary Mirror Size</td>
+                    <td class="table__td">2.4 meters</td>
+                    <td class="table__td">6.5 meters</td>
+                    <td class="table__td">2.4 meters</td>
+                </tr>
+                <tr>
+                    <td class="table__td">Wavelength Range</td>
+                    <td class="table__td">0.001 square degrees</td>
+                    <td class="table__td">2 times Hubble</td>
+                    <td class="table__td">216 times Hubble</td>
+                </tr>
+                <tr>
+                    <td class="table__td">Orbit</td>
+                    <td class="table__td">Orbiting Earth</td>
+                    <td class="table__td">Orbiting the Sun at Sun-Earth Lagrange Point 2</td>
+                    <td class="table__td">Orbiting the Sun at Sun-Earth Lagrange Point 2</td>
+                </tr>
+                <tr>
+                    <td class="table__td">Distance</td>
+                    <td class="table__td">545 km above Earth</td>
+                    <td class="table__td">1.5 million km from Earth</td>
+                    <td class="table__td">1.5 million km from Earth</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <form class="form">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Contact us!</legend>
+                <select class="form__select" id="gender" name="gender">
+                    <option value="mr">Mr.</option>
+                    <option value="ms">Ms.</option>
+                </select>
+                <label class="form__label" for="fn">First name</label>
+                <input class="form__input" id="fn" type="text" pattern="[A-Za-z]+" required>
+                <label class="form__label" for="ln">Last name</label>
+                <input class="form__input" id="ln" type="text" pattern="[A-Za-z]+" required>
+                <label class="form__label" for="email">E-Mail</label>
+                <input class="form__input" id="email" type="email" required>
+                <label class="form__label" for="message">Message</label>
+                <textarea class="form__message" id="message" required></textarea>
+                <input class="form__input" id="submit" type="submit" value="Submit">
+                <input class="form__input" id="reset" type="reset" value="Reset">
+            </fieldset>
+        </form>
+        <button id="scrollToTopBthn" class="main__scrollToTopBtn"><img src="./Images/icons8-top-100.png"
+                alt="top-icon"></button>
+    </main>
+</body>
+
+</html>

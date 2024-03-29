@@ -1,0 +1,138 @@
+@use 'variables';
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: #736f6f;
+}
+
+:root {
+    font-family: 'Lucida Sans', Verdana, sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: variables.$main-color;
+    color: #fff;
+}
+
+article {
+    text-align: center;
+}
+
+h1,
+h2 {
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+p {
+    font-family: 'Lucida Sans', 'Courier New', sans-serif;
+    width: 70%;
+    margin: 1% auto;
+    padding: 1%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000000;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+th,
+td {
+    border: 1px solid #ffffff;
+}
+
+img {
+    object-fit: cover;
+    max-width: 100%;
+}
+
+hr {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+form {
+    margin: 0 auto;
+    text-align: center;
+}
+
+fieldset {
+    display: inline-block;
+    border: 1px solid #ffffff;
+    width: 40rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="submit"],
+input[type="reset"],
+input[type="file"],
+textarea,
+select,
+button {
+    margin: 1% 0;
+    width: 10rem;
+    height: 2.5rem;
+}
+
+select,
+option {
+    width: 100%;
+    font-size: large;
+    border: 1px solid #ccc;
+    background-color: #444;
+    color: #fff;
+    font-size: large;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    height: 3rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: #444;
+    color: #fff;
+    font-size: medium;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    height: 3rem;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    width: 10rem;
+    background-color: variables.$button-blue;
+    font-size: large;
+    color: #ffffff;
+    border: 1px solid #8097c8;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="file"]:hover {
+    background-color: variables.$button-hover-blue;
+    color: #fff;
+    transform: translateY(3px);
+}

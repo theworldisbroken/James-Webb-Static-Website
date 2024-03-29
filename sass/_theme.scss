@@ -1,0 +1,47 @@
+@media (prefers-color-scheme: light) {
+    body {
+        color: #000;
+        background: #fafafa;
+    }
+
+    select,
+    option,
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    textarea {
+        border-color: #000000;
+        background-color: #d9d7d7;
+        color: #000;
+    }
+
+    .form__fieldset {
+        border: 2px solid #000;
+    }
+
+    .discoveries__image:hover,
+    .infrared__image:hover,
+    .size__image:hover {
+        outline: 3px solid #000000;
+        border-color: #fff;
+    }
+
+    .main__scrollToTopBtn {
+        background-color: #363333;
+    }
+
+    .table__th,
+    .table__td {
+        border-color: #000;
+    }
+
+    .components_name-mirror,
+    .components_name-sunshield,
+    .components_name-ISIM,
+    .components_name-sec_mirror,
+    .components_name-Antenna {
+        p {
+            color: #fff;
+        }
+    }
+}
